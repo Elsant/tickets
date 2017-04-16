@@ -13,11 +13,11 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', github: "rails/sass-rails"
 gem 'slim-rails', '~> 3.1', '>= 3.1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'react-bootstrap-rails', '~> 0.30.2'
 
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker'
+gem 'webpacker', github: 'rails/webpacker'
 gem 'coffee-rails', '~> 4.2'
 # gem 'turbolinks', '~> 5'
 
@@ -51,3 +51,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails', '~> 2.2'
+gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'foreman', '~> 0.84.0'
+
