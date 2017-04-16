@@ -54,3 +54,4 @@ gem 'dotenv-rails', '~> 2.2'
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'foreman', '~> 0.84.0'
 
+gem 'simple_form', '~> 3.4'

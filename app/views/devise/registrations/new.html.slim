@@ -1,0 +1,18 @@
+.row
+  .col-md-6.col-md-offset-3
+    h2 Sign up
+
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = f.input :email, autofocus: true
+      = f.input :password
+      - if @minimum_password_length
+        em
+          | (
+          = @minimum_password_length
+          |  characters minimum)
+
+      = f.input :password_confirmation, autocomplete: "off"
+      = f.button :submit, "Sign up", class: "btn btn-info btn-block"
+      
+      - if controller_name != 'sessions'
+        = link_to "Log in", new_session_path(resource_name), class: "btn btn-success btn-block"

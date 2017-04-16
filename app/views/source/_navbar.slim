@@ -9,5 +9,8 @@ nav.navbar.navbar-inverse
       a.navbar-brand href="#"  Tickets app
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
-        li
-          a href="#"  Link
+        - if signed_in?
+          li 
+            = link_to current_user.email, root_path
+          li
+            = link_to t(:sign_out), destroy_user_session_path, :method => :delete 
