@@ -1,5 +1,5 @@
 .container
   -flash.each do |key, value| 
-    = key
-    .alert.key {class: "alert-#{key=='notice' ? 'info': 'danger' }" }
+    = key.inspect
+    .alert.key *{class: "alert-#{key==:notice ? 'info': 'danger' }" }
       = value
