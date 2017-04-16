@@ -33,6 +33,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem "faker"
   gem 'simplecov', '~> 0.14.1', :require => false, :group => :test
+
+  gem 'any_login'
 end
 
 group :development do
@@ -55,3 +57,5 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'foreman', '~> 0.84.0'
 
 gem 'simple_form', '~> 3.4'
+gem 'rails_admin', '~> 1.1', '>= 1.1.1'
+gem 'erubis', '~> 2.7'

@@ -15,5 +15,6 @@
     <div id='app' class="container">
       <%= yield %>
     </div>
+    <%= any_login_here if defined?(AnyLogin)%>
   </body>
 </html>

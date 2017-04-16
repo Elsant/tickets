@@ -4,7 +4,7 @@ require 'rails_helper'
 #   As a user
 #   I want to sign in
 #   So I can visit protected areas of the site
-feature "Sign in", :devise do
+feature "Rememberable sign in", :devise do
   let(:user) {FactoryGirl.create(:user)}
 
   # Scenario: User can sign in with valid credentials

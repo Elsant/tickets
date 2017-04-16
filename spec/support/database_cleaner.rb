@@ -1,8 +1,4 @@
 RSpec.configure do |config|
-  config.before(:each) do
-    # DatabaseCleaner.clean_with :truncation
-    # Rails.application.load_seed
-  end
 
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
@@ -19,10 +15,4 @@ RSpec.configure do |config|
   config.append_after(:each) do
     DatabaseCleaner.clean
   end
-
-  # config.around(:each) do |example|
-  #   DatabaseCleaner.cleaning do
-  #     example.run
-  #   end
-  # end
 end

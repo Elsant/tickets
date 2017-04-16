@@ -1,12 +1,13 @@
 .container
-  -if notice || alert
-    -if notice.present?
-      .alert.alert-info.alert-dismissible role="alert" 
-        button.close aria-label="Close" data-dismiss="alert" type="button" 
-          span aria-hidden="true"  &times;
-        strong = notice
-    -if alert.present?
-      .alert.alert-danger.alert-dismissible role="alert" 
-        button.close aria-label="Close" data-dismiss="alert" type="button" 
-          span aria-hidden="true"  &times;
-        strong = alert
+  .row
+    -if notice || alert
+      -if notice.present?
+        .alert.alert-info.alert-dismissible role="alert" 
+          button.close aria-label="Close" data-dismiss="alert" type="button" 
+            span aria-hidden="true"  &times;
+          strong = notice
+      -if alert.present?
+        .alert.alert-danger.alert-dismissible role="alert" 
+          button.close aria-label="Close" data-dismiss="alert" type="button" 
+            span aria-hidden="true"  &times;
+          strong = alert

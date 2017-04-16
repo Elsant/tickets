@@ -7,5 +7,5 @@ class User < ApplicationRecord
   enum role: [ :user, :agent, :admin ]
 
   validates :email, :password, presence: true
-  validates :email, :uniqueness => { :case_sensitive => false }
+  validates :email, :uniqueness => { case_sensitive: false }
 end
