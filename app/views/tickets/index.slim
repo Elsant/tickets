@@ -1,0 +1,6 @@
+-@tickets.each_with_index do |ticket, index|
+  =index+1 
+  =ticket.title
+  =ticket.body
+  =ticket.closed ? 'closed' : 'open'
+  br
