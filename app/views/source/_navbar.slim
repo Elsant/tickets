@@ -11,9 +11,9 @@ nav.navbar.navbar-inverse
       ul.nav.navbar-nav.navbar-right
         - if signed_in?
           - if current_user.admin?
-            li 
-              = link_to 'Admin Panel', rails_admin_path
-          li 
-            = link_to current_user.email, root_path
-          li
-            = link_to t(:sign_out), destroy_user_session_path, :method => :delete 
+            li = link_to 'Admin Panel', rails_admin_path
+          - if current_user.agent? || current_user.admin?
+            li = link_to 'Export Report', export_tickets_path(format: :pdf)
+            
+          li = link_to current_user.email, root_path
+          li = link_to t(:sign_out), destroy_user_session_path, :method => :delete

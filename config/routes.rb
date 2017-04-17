@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  resources :tickets, only: :index
+  
+  resources :tickets, only: :index do
+    get 'export', on: :collection
+  end
 
   root 'tickets#index'
 
