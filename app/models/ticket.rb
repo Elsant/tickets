@@ -5,7 +5,11 @@ class Ticket < ApplicationRecord
 
   delegate :email, to: :user, prefix: true
 
+  def closed_status 
+    closed ? 'open' : 'close'
+  end
+
   def closed_day 
-    closed.strftime("%m/%d/%Y")
+    closed.strftime("%m/%d/%Y") if closed
   end
 end

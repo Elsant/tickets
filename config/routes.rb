@@ -9,6 +9,13 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+
+  namespace :api do 
+    namespace :v1, defaults: { format: 'json' } do
+       resources :tickets
+    end
+  end
+
   
   resources :tickets, only: :index do
     get 'export', on: :collection
