@@ -12,6 +12,7 @@ class TicketsHead extends React.Component {
           <th>{headers.headBody}</th>
           <th>{headers.headStatus}</th>
           <th>{headers.headClosedDay}</th>
+          <th></th>
         </tr>
       </thead>
     );
