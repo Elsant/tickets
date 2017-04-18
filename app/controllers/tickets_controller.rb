@@ -12,7 +12,7 @@ class TicketsController < ApplicationController
 
   def export
     if current_user.agent? || current_user.admin?
-      @tickets_closed = Ticket.closed_last_month
+      @tickets_closed = Ticket.closed_last_month.includes(:user)
 
       respond_to do |format|
         format.pdf do

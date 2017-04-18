@@ -14,13 +14,10 @@ gem 'sass-rails', github: "rails/sass-rails"
 gem 'slim-rails', '~> 3.1', '>= 3.1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'react-bootstrap-rails', '~> 0.30.2'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'coffee-rails', '~> 4.2'
-# gem 'turbolinks', '~> 5'
-
 
 gem 'jbuilder', '~> 2.5'
 
