@@ -20,7 +20,7 @@ feature "Sign in", :devise do
   #   And I am not signed in
   #   When I sign in with valid credentials
   #   Then I see a success message
-  #   Then I have a role noob
+  #   Then I have a role user
   scenario "user visits the site to sign in" do
     user = create :user
     signin(user.email, user.password)
@@ -34,7 +34,7 @@ feature "Sign in", :devise do
   #   And I am not signed in
   #   When I sign in with valid credentials
   #   Then I see a success message
-  #   Then I have a role noob
+  #   Then I have a role user
   scenario "agent visits the site to sign in" do
     user = create :user, :agent
     signin(user.email, user.password)

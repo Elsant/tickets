@@ -12,12 +12,16 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1, defaults: { format: 'json' } do
-       resources :tickets
+        resources :tickets, only: [:index, :create, :close] do
+          member do
+            patch 'close'
+          end
+        end
     end
   end
 
   
-  resources :tickets, only: :index do
+  resources :tickets, only: export do
     get 'export', on: :collection
   end
 

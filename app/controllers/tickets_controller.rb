@@ -1,16 +1,7 @@
 class TicketsController < ApplicationController
 
-  def index
-    @tickets =
-      case current_user.role
-        when 'agent', 'admin'
-          Ticket.all
-        else
-          current_user.tickets
-        end
-  end
-
   def export
+    # must be done with CanCanCan or Pundit
     if current_user.agent? || current_user.admin?
       @tickets_closed = Ticket.closed_last_month.includes(:user)
 
