@@ -28,7 +28,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails'
-  gem "faker"
   gem 'simplecov', '~> 0.14.1', :require => false, :group => :test
 
   gem 'any_login'
@@ -50,6 +49,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails', '~> 2.2'
+gem "faker"
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'foreman', '~> 0.84.0'
 

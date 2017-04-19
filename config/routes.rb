@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
   
-  resources :tickets, only: export do
+  resources :tickets, only: :export do
     get 'export', on: :collection
   end
 
