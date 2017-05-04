@@ -59,3 +59,5 @@ gem 'erubis', '~> 2.7'
 gem 'prawn', '~> 2.2', '>= 2.2.2'
 gem 'prawn-table', '~> 0.2.2'
 gem 'active_model_serializers', '~> 0.10.5'
+
+gem "rails-erd"
